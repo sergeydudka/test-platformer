@@ -41,7 +41,7 @@ public class SceneGenerator : MonoBehaviour
     private void SpawnChunk() 
     {
         Chunk chunk = Instantiate(GetRandomChunk());
-        chunk.transform.position = spawnedChunks[spawnedChunks.Count - 1].End.position;
+        chunk.transform.position = spawnedChunks[spawnedChunks.Count - 1].End.position - chunk.Begin.localPosition;
         spawnedChunks.Add(chunk);
 
     }
